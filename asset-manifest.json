@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/NASA-API-Hackathon/static/css/main.08e380b7.chunk.css",
+    "main.js": "/NASA-API-Hackathon/static/js/main.5fe0c131.chunk.js",
+    "main.js.map": "/NASA-API-Hackathon/static/js/main.5fe0c131.chunk.js.map",
+    "runtime-main.js": "/NASA-API-Hackathon/static/js/runtime-main.d221210d.js",
+    "runtime-main.js.map": "/NASA-API-Hackathon/static/js/runtime-main.d221210d.js.map",
+    "static/css/2.80937712.chunk.css": "/NASA-API-Hackathon/static/css/2.80937712.chunk.css",
+    "static/js/2.c5e8eac8.chunk.js": "/NASA-API-Hackathon/static/js/2.c5e8eac8.chunk.js",
+    "static/js/2.c5e8eac8.chunk.js.map": "/NASA-API-Hackathon/static/js/2.c5e8eac8.chunk.js.map",
+    "static/js/3.e03f0ee5.chunk.js": "/NASA-API-Hackathon/static/js/3.e03f0ee5.chunk.js",
+    "static/js/3.e03f0ee5.chunk.js.map": "/NASA-API-Hackathon/static/js/3.e03f0ee5.chunk.js.map",
+    "index.html": "/NASA-API-Hackathon/index.html",
+    "static/css/2.80937712.chunk.css.map": "/NASA-API-Hackathon/static/css/2.80937712.chunk.css.map",
+    "static/css/main.08e380b7.chunk.css.map": "/NASA-API-Hackathon/static/css/main.08e380b7.chunk.css.map",
+    "static/js/2.c5e8eac8.chunk.js.LICENSE.txt": "/NASA-API-Hackathon/static/js/2.c5e8eac8.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d221210d.js",
+    "static/css/2.80937712.chunk.css",
+    "static/js/2.c5e8eac8.chunk.js",
+    "static/css/main.08e380b7.chunk.css",
+    "static/js/main.5fe0c131.chunk.js"
+  ]
+}
