@@ -1,0 +1,22 @@
+img {
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 5%;
+}
+
+.centre {
+    text-align: center;
+}
+
+.box {
+    border: 2px solid rgb(0, 0, 0);
+    width: 100%;
+    text-align: center;
+}
+
+.card {
+    text-align: center;
+    display:inline-block;
+    margin: 2%;
+}
+
