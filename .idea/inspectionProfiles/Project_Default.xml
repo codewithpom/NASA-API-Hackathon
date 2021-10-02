@@ -39,6 +39,7 @@
           <option value="http://jakarta.apache.org/" />
           <option value="http://cxf.apache.org/schemas/" />
           <option value="http://medium.com" />
+          <option value="http://codewithpom.github.io" />
         </list>
       </option>
     </inspection_tool>

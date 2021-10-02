@@ -46,8 +46,8 @@ export default function ImgSearch() {
                             <div className="card-body">
                                 <h5 className="card-title">{item['data'][0]['title']}</h5>
                                 <p className="card-text">
-                                    <b>
-                                        {item['data'][0]['description']}
+                                    <b dangerouslySetInnerHTML={{__html: item['data'][0]['description']}}>
+
                                     </b>
 
                                 </p>

@@ -18,9 +18,13 @@ export default function Navbar(props) {
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to={props.aboutLink}>{props.aboutText}</Link>
-
                         </li>
-
+                        <li className={"nav-item"}>
+                            <Link className="nav-link" to={props.image_search_link}>{props.image_search}</Link>
+                        </li>
+                        <li className={"nav-item"}>
+                            <Link className="nav-link" to={props.apod_link}>{props.apod_text}</Link>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -30,14 +34,22 @@ export default function Navbar(props) {
 }
 
 Navbar.propTypes = {
-    title: PropTypes.string.isRequired,
-    aboutText: PropTypes.string.isRequired,
-    aboutLink: PropTypes.string.isRequired
+    title: PropTypes.string,
+    aboutText: PropTypes.string,
+    aboutLink: PropTypes.string,
+    image_search: PropTypes.string,
+    image_search_link: PropTypes.string,
+    apod_text: PropTypes.string,
+    apod_link: PropTypes.string
 }
 
 
 Navbar.defaultProps = {
     title: "Set title here",
     aboutText: "About Text here",
-    aboutLink: "/about"
+    aboutLink: "/about",
+    image_search: "Image Search",
+    image_search_link: "/search",
+    apod_text: "APOD",
+    apod_link: "/apod"
 }

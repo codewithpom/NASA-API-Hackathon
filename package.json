@@ -1,6 +1,6 @@
 {
   "name": "nasa-api-hackathon",
-  "homepage": "https://codewithpom.github.io/NASA-API-Hackathon",
+  "homepage": "http://codewithpom.github.io/NASA-API-Hackathon",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
