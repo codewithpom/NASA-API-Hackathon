@@ -14,9 +14,9 @@ export default function Image(props) {
             <Zoom>
                 <img className="img-fluid" src={props.image_src} alt={props.img_alt} />
             </Zoom>
-            <br></br>
-            <br></br>
-            <br></br>
+            <br/>
+            <br/>
+            <br/>
             <div className="centre">
                 <h1>
                     {props.informationTitle}
