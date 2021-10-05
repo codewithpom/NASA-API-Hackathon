@@ -1,17 +1,12 @@
+*{
+    line-height: 1.5;
+}
+
 img {
     padding-left: 15%;
     padding-right: 15%;
     padding-top: 5%;
-}
-
-.centre {
-    text-align: center;
-}
-
-.box {
-    border: 2px solid rgb(0, 0, 0);
-    width: 100%;
-    text-align: center;
+    -webkit-user-drag: none;
 }
 
 .card {
@@ -20,3 +15,33 @@ img {
     margin: 2%;
 }
 
+.text-justify{
+    text-align: justify;
+}
+
+.base-color{
+    color: #FFC100;
+}
+
+a{
+    color: #ffc400;
+    text-decoration: none;
+}
+
+a:hover{
+    color:#ffbf00;
+    text-decoration: underline;
+}
+
+.form-control{
+    height: 45px;
+    background: #fafafa;
+}
+
+.form-control:focus{
+    background: #f1f1f1;
+}
+
+form button[type="submit"]{
+    background: #ffbf00;
+}
