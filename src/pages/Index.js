@@ -5,11 +5,11 @@ export default function Index() {
     return (
         <>
             <div className={"container"}>
-                <h1 className={"centre"}>
+                <h1 className="text-center">
                     Space Exploration
                 </h1>
                 <br/>
-                <h2 className={"centre"}>
+                <h2 className="text-center">
                     About us
                 </h2>
                 <br/>
