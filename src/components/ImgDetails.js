@@ -41,13 +41,13 @@ export default function ImgDetails(props) {
                         <br />
                         <a class="btn-floating btn btn-tw" type="button" role="button" title="Share on twitter"
                             href={`https://twitter.com/intent/tweet?url=${window.location.href}`}
-                            rel="noopener" target="_blank">
+                            rel="noreferrer" target="_blank">
                             <i class="fab fa-2x fa-twitter" style={{ color: "#00acee" }}></i>
-                        </a>
+                        </a> 
 
                         <a class="btn-floating btn btn-tw" type="button" role="button" title="Share on facebook"
                             href={`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`} target="_blank"
-                            rel="noopener">
+                            rel="noreferrer">
                             <i class="fab fa-2x fa-facebook-square"></i>
                         </a>
                     </BrowserView>
