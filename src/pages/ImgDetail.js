@@ -18,7 +18,7 @@ export default function ImgDetail(props) {
             let final_data = {
                 title: response.data['AVAIL:Title'],
                 center: response.data["AVAIL:Center"],
-                taken_on: response.data['XMP:DateCreated']
+                taken_on: response.data['AVAIL:DateCreated']
             }
             if (response.data["AVAIL:Description"] !== "") {
                 final_data['description'] = response.data["AVAIL:Description"].replace("\n", "<br/>")
@@ -28,10 +28,11 @@ export default function ImgDetail(props) {
             console.log(final_data);
             change_data(final_data);
 
+
         }).catch(function (err) {
             window.location.href = "#/404"
         });
-    }, []);
+    }, [props.match.params.id]);
 
     return (
         <>
