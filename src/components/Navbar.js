@@ -1,11 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+
 export default function Navbar(props) {
     return (
         <nav className="navbar navbar-expand-md navbar-light shadow-sm border-bottom bg-light p-3 fixed-top">
             <div className="container-fluid">
-                <Link className="navbar-brand" to="/">{props.title}</Link>
+                <NavLink className="navbar-brand" to="/" activeClassName="active">{props.title}</NavLink>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon" />
@@ -15,16 +16,16 @@ export default function Navbar(props) {
                     <div className="navbar-nav me-auto mb-2 mb-lg-0">
                         <div className="d-flex justify-content-around mt-4 mt-md-0">
                             <div className="nav-item">
-                                <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+                                <NavLink className="nav-link" aria-current="page" exact to="/" activeClassName="active">Home</NavLink>
                             </div>
                             <div className="nav-item">
-                                <Link className="nav-link" to={props.aboutLink}>{props.aboutText}</Link>
+                                <NavLink activeClassName="active" className="nav-link" exact to={props.aboutLink}>{props.aboutText}</NavLink>
                             </div>
                             <div className={"nav-item"}>
-                                <Link className="nav-link" to={props.image_search_link}>{props.image_search}</Link>
+                                <NavLink className="nav-link" to={props.image_search_link} exact activeClassName="active">{props.image_search}</NavLink>
                             </div>
                             <div className={"nav-item"}>
-                                <Link className="nav-link" to={props.apod_link}>{props.apod_text}</Link>
+                                <NavLink activeClassName="active" className="nav-link" exact to={props.apod_link}>{props.apod_text}</NavLink>
                             </div>
                         </div>
                     </div>
