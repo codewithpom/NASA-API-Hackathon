@@ -6,23 +6,15 @@ import 'react-medium-image-zoom/dist/styles.css'
 export default function Image(props) {
     return (
         <>
-            <div className="centre">
-                <h1>
-                    {props.image_heading}
-                </h1>
-            </div>
+            <p className="h2 text-center">
+                {props.image_heading}
+            </p>
             <Zoom>
                 <img className="img-fluid" src={props.image_src} alt={props.img_alt} />
             </Zoom>
-            <br/>
-            <br/>
-            <br/>
-            <div className="centre">
-                <h1>
-                    {props.informationTitle}
-                </h1>
-            </div>
-
+            <p className="h2 text-center mt-4">
+                {props.informationTitle}
+            </p>
         </>
     )
 }

@@ -24,33 +24,23 @@ function Apod() {
 
     return (
         <>
-            <br/>
-            <div className="container">
-                <Image image_heading={data.title} image_src={data.hdurl} img_alt="Seen of the day" informationTitle="Information about the Picture" />
-                <br/>
-                <div className="centre">
-                    <p>
+            <div className="container pt-5 mt-3">
+                <div className="row p-5 rounded shadow my-5">
+                    <p className="h1 text-secondary text-center">Today's Hit</p>
+                    <hr />
+
+                    <Image image_heading={data.title} image_src={data.hdurl} img_alt="Seen of the day" informationTitle="Information about the Picture" />
+                    <p className="text-center mt-4">
                         This picture was taken by <b>{data.copyright}</b> on <b>{to_date(data.date.replace("-", ""))}</b>
                     </p>
 
-                </div>
-
-                <br/>
-                <div className="centre">
-                    <h1>
+                    <p className="h3 text-center mt-3">
                         Explanation
-                    </h1>
-                </div>
-                <div className="col-md-3 box">
-                    <br/>
-                    <b>
+                    </p>
+                    <p className="col-12 col-md-10 col-lg-8 offset-md-1 offset-lg-2 mx-auto text-justify lh-lg fs-5 mt-4">
                         {data.explanation}
-                    </b>
-                    <br/>
-                    <br/>
+                    </p>
                 </div>
-                <br/>
-                <br/>
             </div>
         </>
     );

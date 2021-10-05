@@ -6,6 +6,7 @@ import Index from "./pages/Index";
 import Navbar from "./components/Navbar";
 import ImgDetail from "./pages/ImgDetail";
 import NotFound from "./pages/NotFound";
+import Footer from "./components/Footer";
 
 
 
@@ -23,6 +24,7 @@ function App() {
                 <Route path="/404" exact component={NotFound} />
                 <Route path="/" component={NotFound} />
             </Switch>
+            <Footer />
         </HashRouter>
     )
 }
