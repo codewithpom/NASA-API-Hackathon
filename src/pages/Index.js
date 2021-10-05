@@ -48,19 +48,19 @@ export default function Index() {
                         </div>
                         <div className="col-12 col-md-10 col-lg-6 mt-md-3 d-flex align-items-center">
                             <form className="w-100">
-                                <div class="mb-3">
-                                    <label for="#Email" class="form-label">Email address</label>
-                                    <input type="email" class="form-control shadow-none" id="Email" aria-describedby="emailHelp" />
+                                <div className="mb-3">
+                                    <label htmlFor="#Email" className="form-label">Email address</label>
+                                    <input type="email" className="form-control shadow-none" id="Email" aria-describedby="emailHelp" />
                                 </div>
-                                <div class="mb-3">
-                                    <label for="#Name" class="form-label">Name</label>
-                                    <input type="email" class="form-control shadow-none" id="Name" aria-describedby="emailHelp" />
+                                <div className="mb-3">
+                                    <label htmlFor="#Name" className="form-label">Name</label>
+                                    <input type="email" className="form-control shadow-none" id="Name" aria-describedby="emailHelp" />
                                 </div>
-                                <div class="mb-3">
-                                    <label for="#Message" class="form-label">Message</label>
-                                    <textarea type="text" class="form-control shadow-none" id="Message" />
+                                <div className="mb-3">
+                                    <label htmlFor="#Message" className="form-label">Message</label>
+                                    <textarea type="text" className="form-control shadow-none" id="Message" />
                                 </div>
-                                <button type="submit" class="btn w-50 border-0 shadow-none py-2 text-white offset-3 mt-3">Submit</button>
+                                <button type="submit" className="btn w-50 border-0 shadow-none py-2 text-white offset-3 mt-3">Submit</button>
                             </form>
                         </div>
                     </div>
