@@ -6,7 +6,7 @@ import Index from "./pages/Index";
 import Navbar from "./components/Navbar";
 import ImgDetail from "./pages/ImgDetail";
 import NotFound from "./pages/NotFound";
-import Footer from "./pages/Footer";
+import Footer from "./components/Footer";
 
 
 
