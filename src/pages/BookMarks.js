@@ -70,7 +70,7 @@ export default function BookMarks() {
                                     <i className="fa fa-times" aria-hidden="true"></i>
                                 </button>
 
-                                <Link to={link.replace(/^[a-z]{4,5}\:\/{2}[a-z]{1,}\:[0-9]{1,4}.(.*)/, '$1').replace("#", "")}>
+                                <Link to={link.replace(/^[a-z]{4,5}:\/{2}[a-z]{1,}:[0-9]{1,4}.(.*)/, '$1').replace("#", "")}>
                                     <button className="btn btn-primary">
                                         Details
                                     </button>

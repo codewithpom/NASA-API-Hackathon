@@ -29,11 +29,7 @@ export default function Index() {
                                     here</a>. We are planning to add personal account for you to bookmark things in it in the future release and even much more. We are even working on a <b>discord bot</b> for you to make easy to use it in <b>discord</b> without any problem.
 
                             </p>
-                            <div className="d-flex">
-                                <a href="#">
-                                    <i className="fas fa-facebook"></i>
-                                </a>
-                            </div>
+
                         </div>
                     </div>
                     <div className="row">

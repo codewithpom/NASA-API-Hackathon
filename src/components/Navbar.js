@@ -22,16 +22,16 @@ export default function Navbar(props) {
                                 <NavLink activeClassName="active" className="nav-link" exact to={props.apod_link}>{props.apod_text}</NavLink>
                             </div>
                             <div className={"nav-item"}>
-                                <NavLink activeClassName="active" className="nav-link" exact to={props.aboutLink}>{props.aboutText}</NavLink>
+                                <NavLink className="nav-link" to={props.image_search_link} exact activeClassName="active">{props.image_search}</NavLink>
                             </div>
                             <div className={"nav-item"}>
-                                <NavLink className="nav-link" to={props.image_search_link} exact activeClassName="active">{props.image_search}</NavLink>
+                                <NavLink activeClassName="active" className="nav-link" exact to={"/bookmarks"}>Your Bookmarks</NavLink>
                             </div>
                             <div className={"nav-item"}>
                                 <NavLink activeClassName="active" className="nav-link" exact to={"/login"}>Login</NavLink>
                             </div>
                             <div className={"nav-item"}>
-                                <NavLink activeClassName="active" className="nav-link" exact to={"/bookmarks"}>Your Bookmarks</NavLink>
+                                <NavLink activeClassName="active" className="nav-link" exact to={"/logout"}>Logout</NavLink>
                             </div>
 
                         </div>
