@@ -22,26 +22,64 @@ export default function Login() {
         })
     }
     useEffect(() => {
-        const sawoConfig = {
+        const sawoConfigEmail = {
             onSuccess: LoginCallback, //required,
             //required, must be one of: 'email', 'phone_number_sms',
             identifierType: 'email',
             apiKey: API_KEY,
-            containerID: "sawo-container",
+            containerID: "sawo-container-email",
         }
 
-        let sawo = new Sawo(sawoConfig)
-        sawo.showForm();
+        const sawoConfigNumber = {
+            onSuccess: LoginCallback, //required,
+            //required, must be one of: 'email', 'phone_number_sms',
+            identifierType: 'phone_number_sms',
+            apiKey: API_KEY,
+            containerID: "sawo-container-phone",
+        }
+
+        const sawoEmail = new Sawo(sawoConfigEmail);
+        const sawoNumber = new Sawo(sawoConfigNumber);
+        sawoEmail.showForm();
+        sawoNumber.showForm();
 
 
     }, [])
+
+    function change_to_number() {
+        document.getElementById("sawo-container-email").style.display = "none";
+        document.getElementById("sawo-container-phone").style.display = "";
+        document.getElementById("number").style.display = "none";
+        document.getElementById("email").style.display = "";
+
+    }
+
+    function change_to_email() {
+        document.getElementById("sawo-container-email").style.display = "";
+        document.getElementById("sawo-container-phone").style.display = "none";
+        document.getElementById("number").style.display = "";
+        document.getElementById("email").style.display = "none";
+
+    }
 
     return (
 
         <div className="container mt-5 pt-5" style={{ minHeight: "100vh" }}>
             <br />
+            <div style={{ textAlign: "center" }}>
+                <div id="sawo-container-email" style={{ height: "450px", width: "450px" }}></div>
+                <div id="sawo-container-phone" style={{ height: "450px", width: "450px", display: "none" }}></div>
+            </div>
 
-            <div id="sawo-container" style={{ height: "450px", width: "450px" }}></div>
+            <div style={{ textAlign: "center" }}>
+                <button className="btn btn-warning" id="email" style={{ display: "none" }} onClick={change_to_email}>
+                    Verify by email
+                </button>
+                <button className="btn btn-warning" id="number" onClick={change_to_number}>
+                    Verify by number
+                </button>
+            </div>
+
         </div>
 
     )
