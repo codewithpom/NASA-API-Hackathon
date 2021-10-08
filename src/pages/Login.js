@@ -17,7 +17,7 @@ export default function Login() {
     function LoginCallback(payload) {
         console.log(payload);
         axios.post(`${process.env.REACT_APP_BACKEND_URL}/create_account`, { "payload": payload }).then(function (reponse) {
-            setCookie("user-id", payload['user_id']);
+            setCookie("user-id", payload['user_id'], 30);
             window.location.href = "#/sucess";
         })
     }
