@@ -7,6 +7,8 @@ import Navbar from "./components/Navbar";
 import ImgDetail from "./pages/ImgDetail";
 import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer";
+import Login from "./pages/Login";
+import BookMarks from "./pages/BookMarks";
 
 
 
@@ -21,7 +23,9 @@ function App() {
                 <Route path="/about" exact component={About} />
                 <Route path="/search" exact component={ImgSearch} />
                 <Route path="/image/:id" exact component={ImgDetail} />
+                <Route path="/login" exact component={Login} />
                 <Route path="/404" exact component={NotFound} />
+                <Route path="/bookmarks" exact component={BookMarks} />
                 <Route path="/" component={NotFound} />
             </Switch>
             <Footer />

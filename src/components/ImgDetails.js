@@ -1,12 +1,83 @@
-import React from 'react'
+import { React, useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
 import { MobileView, BrowserView } from 'react-device-detect';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
+
+
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) === 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+function checkCookie() {
+    let username = getCookie("user-id");
+    return username !== "";
+}
+
+
 
 
 
 export default function ImgDetails(props) {
+    const [bookmarks, change_bookmarks] = useState([])
+    useEffect(() => {
+        const user_id = getCookie("user-id");
+
+        axios.post(`${process.env.REACT_APP_BACKEND_URL}/bookmarks`, {
+            "payload": {
+                'user-id': user_id
+            }
+        }).then(function (data) {
+            change_bookmarks(data.data)
+        })
+
+    }, [])
+    function get_bookmarks() {
+        const user_id = getCookie("user-id");
+
+        axios.post(`${process.env.REACT_APP_BACKEND_URL}/bookmarks`, {
+            "payload": {
+                'user-id': user_id
+            }
+        }).then(function (data) {
+            change_bookmarks(data.data)
+        })
+    }
+
+    function remove_bookmarks() {
+        axios.post(`${process.env.REACT_APP_BACKEND_URL}/delete_bookmark`, {
+            "payload": {
+                "user-id": getCookie("user-id"),
+                "url": window.location.href
+            }
+        }).then(function (response) {
+            get_bookmarks()
+        })
+    }
+
+    function add_bookmark() {
+        axios.post(`${process.env.REACT_APP_BACKEND_URL}/add_bookmark`, {
+            "payload": {
+                "user-id": getCookie('user-id'),
+                "url": window.location.href
+            }
+        }).then(function (response) {
+            get_bookmarks();
+        })
+    }
     function share() {
         navigator.share({
             "title": "Share this Image",
@@ -14,10 +85,13 @@ export default function ImgDetails(props) {
             "url": window.location.href
         })
     }
+
     return (
         <>
-            <div className="container">
-                <div className="centre">
+            <div className="container mt-5 pt-5" style={{ minHeight: "100vh" }}>
+                <div className="text-center">
+
+
                     <h1>
                         {props.title}
                     </h1>
@@ -26,6 +100,27 @@ export default function ImgDetails(props) {
                     <Zoom>
                         <img src={props.img_src} className="img-fluid" alt={props.NASA_id} />
                     </Zoom>
+                    {checkCookie("user-id") ? (
+                        bookmarks.includes(window.location.href) ? (
+
+                            <button className="btn btn-danger" style={{ float: "right", margin: '30px' }} title={"Remove this image as Bookmarked"} onClick={remove_bookmarks}>
+                                <i className="fas fa-times"></i>
+                            </button>
+                        ) : (
+                            <button className="btn btn-danger" style={{ float: "right", margin: '30px' }} title={"Bookmark this image"} onClick={add_bookmark}>
+                                <i className="fa fa-bookmark"></i>
+                            </button>
+                        )
+                    ) : (
+                        <>
+                            <Link to="/login">
+                                <button className="btn btn-danger" style={{ float: "right", marginBottom: '10px' }} title={"Login to Bookmark this image"}>
+                                    Login To Bookmark this image
+                                </button>
+                            </Link>
+                        </>
+                    )}
+
                     <MobileView>
                         <br />
                         <button style={{ float: "right", textAlign: "center" }} className="btn btn-danger" onClick={share}>
@@ -39,23 +134,23 @@ export default function ImgDetails(props) {
                     </MobileView>
                     <BrowserView>
                         <br />
-                        <a class="btn-floating btn btn-tw" type="button" role="button" title="Share on twitter"
+                        <a className="btn-floating btn btn-tw" type="button" role="button" title="Share on twitter"
                             href={`https://twitter.com/intent/tweet?url=${window.location.href}`}
                             rel="noreferrer" target="_blank">
-                            <i class="fab fa-2x fa-twitter" style={{ color: "#00acee" }}></i>
-                        </a> 
+                            <i className="fab fa-2x fa-twitter" style={{ color: "#00acee" }}></i>
+                        </a>
 
-                        <a class="btn-floating btn btn-tw" type="button" role="button" title="Share on facebook"
+                        <a className="btn-floating btn btn-tw" type="button" role="button" title="Share on facebook"
                             href={`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`} target="_blank"
                             rel="noreferrer">
-                            <i class="fab fa-2x fa-facebook-square"></i>
+                            <i className="fab fa-2x fa-facebook-square"></i>
                         </a>
                     </BrowserView>
                 </div>
                 <br />
                 <hr />
                 <br />
-                <div className="centre">
+                <div className="text-center">
                     <h2>NASA ID - <b>{props.NASA_id}</b></h2>
                     <h2>Taken on - <b>{props.taken_on}</b></h2>
                     <h2>Center - <b>{props.center}</b></h2>

@@ -83,7 +83,7 @@ export default function ImgSearch() {
     }
 
     return <>
-        <div className="container">
+        <div className="container mt-5 pt-5" style={{ minHeight: "100vh" }}>
             <br />
             <div className="mb-3">
                 <h1 className="centre">

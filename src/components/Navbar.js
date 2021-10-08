@@ -15,18 +15,25 @@ export default function Navbar(props) {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <div className="navbar-nav me-auto mb-2 mb-lg-0">
                         <div className="d-flex justify-content-around mt-4 mt-md-0">
-                            <div className="nav-item">
+                            <div className={"nav-item"}>
                                 <NavLink className="nav-link" aria-current="page" exact to="/" activeClassName="active">Home</NavLink>
                             </div>
-                            <div className="nav-item">
+                            <div className={"nav-item"}>
+                                <NavLink activeClassName="active" className="nav-link" exact to={props.apod_link}>{props.apod_text}</NavLink>
+                            </div>
+                            <div className={"nav-item"}>
                                 <NavLink activeClassName="active" className="nav-link" exact to={props.aboutLink}>{props.aboutText}</NavLink>
                             </div>
                             <div className={"nav-item"}>
                                 <NavLink className="nav-link" to={props.image_search_link} exact activeClassName="active">{props.image_search}</NavLink>
                             </div>
                             <div className={"nav-item"}>
-                                <NavLink activeClassName="active" className="nav-link" exact to={props.apod_link}>{props.apod_text}</NavLink>
+                                <NavLink activeClassName="active" className="nav-link" exact to={"/login"}>Login</NavLink>
                             </div>
+                            <div className={"nav-item"}>
+                                <NavLink activeClassName="active" className="nav-link" exact to={"/bookmarks"}>Your Bookmarks</NavLink>
+                            </div>
+
                         </div>
                     </div>
                 </div>

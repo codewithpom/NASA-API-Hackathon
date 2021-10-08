@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 export default function NotFound() {
     return (
-        <div className="container">
+        <div className="container mt-5 pt-5" style={{ minHeight: "100vh" }}>
             <br />
             <br />
             <div style={{ textAlign: "center" }}>

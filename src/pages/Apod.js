@@ -24,7 +24,7 @@ function Apod() {
 
     return (
         <>
-            <div className="container pt-5 mt-3">
+            <div className="container pt-5 mt-3" style={{ minHeight: "100vh" }}>
                 <div className="row p-5 rounded shadow my-5">
                     <p className="h1 text-secondary text-center">Today's Hit</p>
                     <hr />

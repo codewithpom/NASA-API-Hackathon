@@ -5,7 +5,7 @@ import launch from '../launch.svg';
 export default function Index() {
     return (
         <>
-            <div className={"container mt-4 pt-5"}>
+            <div className={"container mt-4 pt-5"} style={{ minHeight: "100vh" }}>
                 <div className="rounded shadow p-5 pt-2 mb-5 mt-5">
                     <div className="row flex-row row-reverse mb-5 mt-5">
                         {/* About Us */}
