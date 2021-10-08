@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer";
 import Login from "./pages/Login";
 import BookMarks from "./pages/BookMarks";
+import Sucess from "./pages/Sucess";
 
 
 
@@ -24,6 +25,7 @@ function App() {
                 <Route path="/login" exact component={Login} />
                 <Route path="/404" exact component={NotFound} />
                 <Route path="/bookmarks" exact component={BookMarks} />
+                <Route path="/sucess" exact component={Sucess} />
                 <Route path="/" component={NotFound} />
             </Switch>
             <Footer />
