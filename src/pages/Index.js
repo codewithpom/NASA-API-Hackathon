@@ -26,7 +26,7 @@ export default function Index() {
                             <p className="h5 text-justify lh-xl">
                                 This is a place to research about space and this was made as a hackathon project and we
                                 use <b>official</b> NASA API that we got from <a className="decoration-none" href={"https://api.nasa.gov"} target={"_blank"} rel="noreferrer">
-                                    here</a>. We are planning to add personal account for you to bookmark things in it in the future release and even much more. We are even working on a <b>discord bot</b> for you to make easy to use it in <b>discord</b> without any problem.
+                                    here</a>. We have added <b>personal account</b> for you to bookmark things in it and we have used <b>SAWO Labs</b> in it. We are even working on a <b>discord bot</b> for you to make easy to use it in <b>discord</b> without any problem.
 
                             </p>
 
