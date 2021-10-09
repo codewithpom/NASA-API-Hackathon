@@ -18,7 +18,17 @@ export default function Login() {
         console.log(payload);
         axios.post(`${process.env.REACT_APP_BACKEND_URL}/create_account`, { "payload": payload }).then(function (reponse) {
             setCookie("user-id", payload['user_id'], 30);
-            window.location.href = "#/sucess";
+            const location = window.location.href;
+            const param_start = location.indexOf("?");
+            console.log(param_start);
+            const params = location.slice(param_start);
+            console.log(params);
+            if (param_start === -1) {
+                window.location.href = "#/sucess";
+            } else {
+                window.location.href = `#/sucess${params}`;
+            }
+
         })
     }
     useEffect(() => {
