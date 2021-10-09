@@ -46,7 +46,7 @@ export default function Index() {
                             <form className="w-100" action="https://formspree.io/f/meqvdnwj" method="post">
                                 <div className="mb-3">
                                     <label htmlFor="#Email" className="form-label">Email address</label>
-                                    <input type="email" className="form-control shadow-none" id="Email" aria-describedby="emailHelp" name="Name" />
+                                    <input type="email" className="form-control shadow-none" id="Email" aria-describedby="emailHelp" name="Email" />
                                 </div>
                                 <div className="mb-3">
                                     <label htmlFor="#Name" className="form-label">Name</label>
@@ -54,7 +54,7 @@ export default function Index() {
                                 </div>
                                 <div className="mb-3">
                                     <label htmlFor="#Message" className="form-label">Message</label>
-                                    <textarea type="text" className="form-control shadow-none" id="Message" name="Name" />
+                                    <textarea type="text" className="form-control shadow-none" id="Message" name="Message" />
                                 </div>
                                 <button type="submit" className="btn w-50 border-0 shadow-none py-2 text-white offset-3 mt-3">Submit</button>
                             </form>
