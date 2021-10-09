@@ -64,7 +64,6 @@ export default function ImgSearch() {
                             <div className="card-body">
                                 <HashRouter basename={"/"}>
                                     <Link to={`/image/${item['data'][0]['nasa_id']}`} className="card-link">Details</Link>
-                                    <Link to="#" className="card-link">Another link</Link>
                                 </HashRouter>
 
                             </div>
