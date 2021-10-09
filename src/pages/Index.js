@@ -43,18 +43,18 @@ export default function Index() {
                             <img className="user-select-none" src={launch} alt="Logo" />
                         </div>
                         <div className="col-12 col-md-10 col-lg-6 mt-md-3 d-flex align-items-center">
-                            <form className="w-100">
+                            <form className="w-100" action="https://formspree.io/f/meqvdnwj" method="post">
                                 <div className="mb-3">
                                     <label htmlFor="#Email" className="form-label">Email address</label>
-                                    <input type="email" className="form-control shadow-none" id="Email" aria-describedby="emailHelp" />
+                                    <input type="email" className="form-control shadow-none" id="Email" aria-describedby="emailHelp" name="Name" />
                                 </div>
                                 <div className="mb-3">
                                     <label htmlFor="#Name" className="form-label">Name</label>
-                                    <input type="email" className="form-control shadow-none" id="Name" aria-describedby="emailHelp" />
+                                    <input className="form-control shadow-none" id="Name" aria-describedby="emailHelp" name="Name" />
                                 </div>
                                 <div className="mb-3">
                                     <label htmlFor="#Message" className="form-label">Message</label>
-                                    <textarea type="text" className="form-control shadow-none" id="Message" />
+                                    <textarea type="text" className="form-control shadow-none" id="Message" name="Name" />
                                 </div>
                                 <button type="submit" className="btn w-50 border-0 shadow-none py-2 text-white offset-3 mt-3">Submit</button>
                             </form>
