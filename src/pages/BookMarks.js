@@ -22,7 +22,7 @@ export default function BookMarks() {
     const [element, change_element] = useState([]);
     useEffect(() => {
         if (getCookie('user-id') === "") {
-            window.location.href = "#/login";
+            window.location.href = "#/login?redirect=#bookmarks";
             return <></>;
         }
 
@@ -54,6 +54,13 @@ export default function BookMarks() {
     }
 
     console.log(element)
+    function get_Url() {
+        let loc = window.location.href;
+        console.log(loc.split("#")[0]);
+        return loc.split("#")[0];
+
+    }
+
     return (
         <div className="conatiner mt-4 pt-5 text-center" style={{ minHeight: "100vh" }}>
             <h1>
@@ -67,8 +74,8 @@ export default function BookMarks() {
                     Array(element)[0].map((link, index) => {
                         console.log(link)
                         return (
-                            <div className="col-lg-4">
-                                <div className="card" style={{ width: "18rem" }} key={index} id={index} link={link}>
+                            <div className="col-lg-4" key={index} id={index} link={link}>
+                                <div className="card" style={{ width: "18rem" }}>
                                     <img src={`https://images-assets.nasa.gov/image/${link.split("/").slice(-1)}/${link.split("/").slice(-1)}~thumb.jpg`} className="card-img-top" alt="..." />
                                     <div className="card-body">
                                         <h5 className="card-title">{decodeURI(link.split("/").slice(-1))}</h5>
@@ -76,7 +83,7 @@ export default function BookMarks() {
                                             <i className="fa fa-times" aria-hidden="true"></i>
                                         </button>
 
-                                        <Link to={link.replace(window.location.href, "")}>
+                                        <Link to={link.replace(get_Url(), "").replace("#", "")}>
                                             <button className="btn btn-primary">
                                                 Details
                                             </button>
