@@ -10,7 +10,8 @@ export default function Sucess() {
             console.log("Ok so you can now go");
             console.log(redirect_page);
             setTimeout(() => {
-                window.location.href = redirect_page;
+                window.location = /.*redirect_page=([^&]*).*/.exec(document.location.href)[1];
+
 
             }, 5000)
         }
